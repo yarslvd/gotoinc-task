@@ -1,0 +1,25 @@
+@use '../../styles/mixins' as *;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+
+  .logo {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .links {
+    @include reset-list;
+    display: flex;
+    gap: 90px;
+
+    li {
+      font-size: 24px;
+    }
+  }
+}

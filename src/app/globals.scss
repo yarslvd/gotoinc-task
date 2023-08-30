@@ -1,0 +1,21 @@
+@use '../styles/mixins.scss' as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  color: $base-dark-color;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-weight: 400;
+  background-color: #FAF1E4 !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
