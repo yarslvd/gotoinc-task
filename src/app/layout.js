@@ -14,13 +14,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <CssBaseline />
-    <body className={jost.className} style={{ height: '100vh'}}>
-      <Container maxWidth="lg" style={{ display: 'flex', flexDirection: 'column', height: '100%'}}>
-        <Navigation />
-        {children}
-      </Container>
-    </body>
+      <CssBaseline />
+      <body className={jost.className} style={{ height: '100vh'}}>
+        <Container maxWidth="lg" style={{ display: 'flex', flexDirection: 'column', height: '100%'}}>
+          <Navigation />
+          {children}
+        </Container>
+      </body>
     </html>
   )
 }

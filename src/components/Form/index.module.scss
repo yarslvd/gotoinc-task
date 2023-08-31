@@ -1,0 +1,44 @@
+@use '../../styles/mixins' as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  gap: 20px;
+  width: 100%;
+
+    h1 {
+      color: $base-dark-color;
+      font-size: 48px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .form {
+      display: flex;
+      gap: 30px;
+
+      .fields {
+        max-width: 350px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .button {
+        padding: 20px;
+        background-color: $base-dark-color;
+        color: $base-light-color;
+        align-self: center;
+      }
+    }
+}
+
+@media screen and (max-width:550px) {
+  .container {
+    .form {
+      flex-direction: column;
+    }
+  }
+}
