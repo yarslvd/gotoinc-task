@@ -10,6 +10,7 @@ const RequestItem = ({ src, href, text }) => {
         src={src}
         fill
         style={{objectFit:"cover"}}
+        alt="Image illustration"
       />
       <h2 className={styles.heading}>{text}</h2>
     </Link>

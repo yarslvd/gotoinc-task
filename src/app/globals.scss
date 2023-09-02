@@ -21,6 +21,8 @@ a {
 }
 
 .pac-container {
+  z-index: 100000;
+
   &:after {
     display: none;
   }

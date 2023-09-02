@@ -22,4 +22,25 @@
       font-size: 24px;
     }
   }
+
+  .mobileMenu {
+    display: none;
+    cursor: pointer;
+
+    svg {
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    .mobileMenu {
+      display: flex;
+    }
+
+    .links {
+      display: none;
+    }
+  }
 }

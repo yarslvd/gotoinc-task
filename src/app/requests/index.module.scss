@@ -1,0 +1,13 @@
+@use '../../styles/mixins.scss' as *;
+
+.container {
+  th {
+    font-weight: 600;
+    text-align: center;
+  }
+
+  td:first-child {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}

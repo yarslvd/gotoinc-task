@@ -1,17 +1,24 @@
+import dayjs from "dayjs";
+import 'dayjs/locale/uk';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import {Controller} from "react-hook-form";
 import {TextField} from "@mui/material";
-import 'dayjs/locale/uk';
-import {useState} from "react";
+import {Controller} from "react-hook-form";
 
-export const DatePickerComponent = ({ control }) => {
+dayjs.extend(customParseFormat)
+
+export const DatePickerComponent = ({ control, date }) => {
+  const parsedDate = dayjs(date, 'DD/MM/YYYY');
+
   return(
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="uk">
       <Controller
         control={control}
         name="date"
+        defaultValue={parsedDate.isValid() ? parsedDate : dayjs(new Date())}
         render={({ field: { onChange, value }, fieldState }) => (
             <DatePicker
               label="Date of dispatch"

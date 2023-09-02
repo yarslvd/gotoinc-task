@@ -32,6 +32,12 @@
         color: $base-light-color;
         align-self: center;
       }
+
+      .buttonEdit {
+        background-color: $base-dark-color;
+        height: 45px;
+        border-radius: 10px;
+      }
     }
 }
 
